@@ -79,9 +79,10 @@ const stats = [
         <img src="/nawar-plus-logo.png" alt="Nawar Plus" class="np-hero-logo" />
       </div>
 
-      <!-- Título (una sola línea, sin doblar) -->
+      <!-- Título estilo home: fade + azul bold -->
       <h1 class="np-hero-title np-anim" style="--hd:0.25s;">
-        Aprender neerlandés en NL no debería sentirse así.
+        <span class="text-gradient-white">Aprender neerlandés</span><br>
+        <span class="np-hero-title-blue">no debería sentirse así.</span>
       </h1>
 
       <!-- Subtítulo dolor -->
@@ -89,11 +90,16 @@ const stats = [
         Te mudaste, hiciste el esfuerzo, pagaste el curso, descargaste tres apps, miraste vídeos de YouTube y seguiste a una neerlandesa en Instagram. <strong>Y aún así, sigues sin entender al cartero.</strong>
       </p>
 
-      <!-- Scroll indicator -->
-      <a href="#dolor" class="np-scroll-cue np-anim" style="--hd:0.55s;" aria-label="Ver más">
-        <span>Te entendemos</span>
-        <span class="np-scroll-line">
-          <span class="np-scroll-dot"></span>
+      <!-- Scroll indicator chulo -->
+      <a href="#dolor" class="np-scroll-down np-anim" style="--hd:0.55s;" aria-label="Sigue leyendo">
+        <span class="np-scroll-down-label">Te entendemos</span>
+        <span class="np-scroll-down-arrows" aria-hidden="true">
+          <svg class="np-chevron np-chevron-1" width="28" height="18" viewBox="0 0 28 18" fill="none">
+            <path d="M2 2l12 12 12-12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg class="np-chevron np-chevron-2" width="28" height="18" viewBox="0 0 28 18" fill="none">
+            <path d="M2 2l12 12 12-12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </span>
       </a>
     </div>
@@ -178,8 +184,8 @@ const stats = [
   <section class="section-light" data-navbar="light" style="padding-bottom: 96px;">
     <div class="inner">
       <div class="np-vert-header sr">
-        <h3 class="np-vert-section-title">Lo que recibes cada día y cada semana</h3>
-        <p class="np-vert-section-sub">Cuatro piezas que se complementan. Un único objetivo: que aprendas neerlandés de verdad, sin que te cueste un sueldo.</p>
+        <h3 class="np-vert-section-title">Lo que recibirás</h3>
+        <p class="np-vert-section-sub">Cuatro piezas que se complementan. Un único objetivo: que aprendas neerlandés de verdad.</p>
       </div>
 
       <div class="np-vert-grid">
@@ -218,8 +224,8 @@ const stats = [
       <div class="np-comp-header sr">
         <span class="np-eyebrow-small">Plan gratuito vs Plus</span>
         <h2 class="np-comp-title">
-          <span class="text-gradient-white">Empieza gratis.</span><br>
-          <span style="color:#4da3ff;">Sube a Plus cuando quieras.</span>
+          <span class="text-gradient-white np-comp-title-line">Empieza gratis.</span>
+          <span class="np-comp-title-line" style="color:#4da3ff;font-weight:800;">Sube a Plus cuando quieras.</span>
         </h2>
         <p class="np-comp-sub">
           El plan gratuito sirve para crear hábito y demostrarte que el método funciona. Plus es para quien ya quiere aprender de verdad, con clase semanal en vivo, comunidad activa y una noticia diaria.
@@ -282,46 +288,46 @@ const stats = [
   </section>
 
   <!-- ════════════════════════════════════════════
-       7. PRECIO HONESTO — Por qué 30€
+       7. LO MEJOR PARA HISPANOS
   ════════════════════════════════════════════ -->
-  <section class="np-price" data-navbar="dark">
-    <div class="np-price-glow" aria-hidden="true"></div>
+  <section class="np-best" data-navbar="dark">
+    <div class="np-best-glow" aria-hidden="true"></div>
     <div class="dots-dark" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;opacity:0.4;"></div>
 
     <div class="inner" style="position:relative;z-index:1;">
-      <div class="np-price-header sr">
-        <span class="np-eyebrow-small">El precio honesto</span>
-        <h2 class="np-price-title">
-          <span class="text-gradient-white">30€ al mes.</span><br>
-          <span style="color:#4da3ff;">Punto.</span>
+      <div class="np-best-header sr">
+        <span class="np-eyebrow-small">Por qué Nawar Plus</span>
+        <h2 class="np-best-title">
+          <span class="text-gradient-white">Lo mejor que existe</span><br>
+          <span style="color:#4da3ff;">para aprender neerlandés siendo hispano.</span>
         </h2>
-        <p class="np-price-sub">
-          Sabemos que es ridículamente barato. Una academia en NL cobra unos €800 solo por el nivel A1, y una hora suelta con profesor particular ronda los €65. Nosotros incluimos clase semanal en vivo, noticia diaria, juegos ilimitados y comunidad hispanohablante privada por menos de 1€ al día. Porque queremos que aprender neerlandés sea accesible para cualquier hispano. No solo para quien puede pagar €800 por nivel.
+        <p class="np-best-sub">
+          No competimos con academias en precio ni con apps en gamificación. Construimos otra cosa: el único plan diseñado por y para hispanohablantes que viven en Países Bajos. Lo que necesitas tú, no lo que necesita un angloparlante o un nativo europeo.
         </p>
       </div>
 
-      <div class="np-price-compare sr">
-        <div class="np-price-col">
-          <p class="np-price-col-label">Curso A1 en academia</p>
-          <p class="np-price-col-amount">~€800</p>
-          <p class="np-price-col-detail">Solo un nivel · sin comunidad · sin grabaciones</p>
+      <div class="np-best-pillars">
+        <div class="np-best-pillar sr-bi">
+          <div class="np-best-pillar-icon">🇪🇸</div>
+          <h3 class="np-best-pillar-title">De español a neerlandés. Sin pasar por inglés.</h3>
+          <p class="np-best-pillar-desc">Las explicaciones aprovechan que tu lengua materna es latina. Atajos gramaticales que solo funcionan si piensas en español. Cero confusión por traducir dos veces.</p>
         </div>
-        <div class="np-price-col">
-          <p class="np-price-col-label">Profesor particular</p>
-          <p class="np-price-col-amount">~€65/h</p>
-          <p class="np-price-col-detail">Una hora suelta · sin material · sin grupo</p>
+        <div class="np-best-pillar sr-bi" style="transition-delay:0.06s;">
+          <div class="np-best-pillar-icon">👩‍🏫</div>
+          <h3 class="np-best-pillar-title">Profesores que saben cómo aprendes.</h3>
+          <p class="np-best-pillar-desc">Expertos en hispanohablantes. Conocen dónde tropezamos siempre, qué reglas se nos atragantan y cómo guiarnos sin frustración. No es un nativo improvisando, es alguien que enseñó a cientos como tú.</p>
         </div>
-        <div class="np-price-col np-price-col-featured">
-          <span class="np-price-best">Mejor opción</span>
-          <p class="np-price-col-label" style="color:#fff;">Nawar Plus completo</p>
-          <p class="np-price-col-amount" style="color:#4da3ff;">30€/mes</p>
-          <p class="np-price-col-detail" style="color:rgba(255,255,255,0.85);">Todo incluido cada mes, cancelable cuando quieras</p>
+        <div class="np-best-pillar sr-bi" style="transition-delay:0.12s;">
+          <div class="np-best-pillar-icon">🤝</div>
+          <h3 class="np-best-pillar-title">Una tribu hispana en NL, no un foro frío.</h3>
+          <p class="np-best-pillar-desc">Resuelves dudas en español con gente que ya lleva años aquí. Compartes recursos, atajos de la vida diaria y consejos que ningún profesor neerlandés te va a dar. Por fin aprendes acompañado.</p>
+        </div>
+        <div class="np-best-pillar sr-bi" style="transition-delay:0.18s;">
+          <div class="np-best-pillar-icon">📍</div>
+          <h3 class="np-best-pillar-title">Pensado para tu vida en Países Bajos.</h3>
+          <p class="np-best-pillar-desc">Aprendes con noticias reales del país donde vives, vocabulario que vas a usar mañana mismo, situaciones que ya te han pasado: el cartero, el médico, el ayuntamiento. Útil de verdad, desde el día uno.</p>
         </div>
       </div>
-
-      <p class="np-price-coffee sr">
-        Es <strong style="color:#4da3ff;">menos de 1€ al día</strong>. Lo mismo que un café cualquiera en Ámsterdam.
-      </p>
     </div>
   </section>
 
@@ -331,16 +337,16 @@ const stats = [
   <section class="np-manifiesto" data-navbar="dark">
     <div class="inner">
       <div class="np-manifiesto-card sr-s">
-        <span class="np-eyebrow-small" style="margin-bottom:20px;">Nuestra promesa</span>
+        <span class="np-eyebrow-small" style="margin-bottom:20px;">Nuestra misión</span>
         <h2 class="np-manifiesto-title">
-          Desde Nawar creemos que aprender neerlandés<br>
-          <span style="color:#4da3ff;">no debería ser un lujo.</span>
+          Cada hispano en Países Bajos merece<br>
+          <span style="color:#4da3ff;">hablar neerlandés de verdad.</span>
         </h2>
         <p class="np-manifiesto-text">
-          Por eso construimos Nawar Plus al precio más bajo posible: 30€ al mes. No es un curso premium con tres pagos en cuotas, ni una academia con factura por nivel. Es el plan completo con todo lo que de verdad necesitas para hablar neerlandés en serio, cancelable cuando quieras.
+          Construimos Nawar Plus para que el idioma deje de ser la pared que te bloquea de tu propia vida aquí. Integrarte, trabajar, hacer amigos neerlandeses, defenderte en el médico, leer una carta del ayuntamiento sin entrar en pánico. Todo eso empieza por aprender el idioma con el método correcto.
         </p>
         <p class="np-manifiesto-text">
-          Porque cada hispano que llega a Países Bajos merece la oportunidad de integrarse, trabajar y vivir aquí sin que el idioma sea la pared que lo bloquea. Esa es la misión. Eso es Nawar Plus.
+          No somos una academia más ni una app más. Somos el único ecosistema pensado por y para hispanohablantes que viven en NL. Esa es la diferencia, y esa es la misión.
         </p>
         <div class="np-manifiesto-ctas">
           <a href="https://www.holandesnawar.com/lista-de-espera" class="np-comp-cta np-comp-cta-plus" style="width:auto;padding:18px 32px;">
@@ -466,64 +472,92 @@ const stats = [
 .np-hero-logo-wrap {
   position: relative;
   display: inline-block;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 .np-hero-logo {
   display: block;
-  max-width: 520px;
-  width: 78vw;
+  max-width: 380px;
+  width: 60vw;
   height: auto;
   filter:
-    drop-shadow(0 0 32px rgba(77,163,255,0.45))
-    drop-shadow(0 20px 48px rgba(0,0,0,0.55));
+    drop-shadow(0 0 28px rgba(77,163,255,0.40))
+    drop-shadow(0 16px 40px rgba(0,0,0,0.50));
   animation: np-float-y 6s ease-in-out infinite;
 }
 
 .np-hero-title {
   font-family: 'Poppins', system-ui, sans-serif;
-  font-size: clamp(30px, 4.6vw, 60px);
-  font-weight: 600;
-  letter-spacing: -0.028em;
-  line-height: 1.15;
+  font-size: clamp(34px, 5.4vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.030em;
+  line-height: 1.08;
   margin: 0 0 24px;
   color: #fff;
-  max-width: 820px;
+  max-width: 880px;
+}
+.np-hero-title-blue {
+  color: #4da3ff;
+  -webkit-text-fill-color: #4da3ff;
+  font-weight: 800;
 }
 
 .np-hero-sub {
-  font-size: clamp(15px, 1.5vw, 19px);
-  color: rgba(255,255,255,0.78);
-  line-height: 1.7;
-  max-width: 640px;
-  margin: 0 auto 56px;
+  font-size: clamp(15px, 1.5vw, 18px);
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto 52px;
 }
-.np-hero-sub strong { color: #fff; font-weight: 600; }
+.np-hero-sub strong { color: #fff; font-weight: 700; }
 
-/* Scroll cue */
-.np-scroll-cue {
-  display: inline-flex; flex-direction: column;
-  align-items: center; gap: 12px;
-  font-size: 11px; font-weight: 600;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
+/* Scroll cue — texto grande + chevrons en cascada, sin fondo */
+.np-scroll-down {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #4da3ff;
   text-decoration: none;
-  transition: color 0.25s;
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), color 0.3s;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
 }
-.np-scroll-cue:hover { color: rgba(255,255,255,0.9); }
-.np-scroll-line {
+.np-scroll-down:hover {
+  transform: translateY(3px);
+}
+.np-scroll-down:hover .np-scroll-down-label {
+  color: #fff;
+}
+.np-scroll-down-label {
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.92);
+  transition: color 0.3s;
+}
+.np-scroll-down-arrows {
   position: relative;
-  width: 1.5px; height: 38px;
-  background: rgba(255,255,255,0.18);
-  overflow: hidden;
+  width: 28px; height: 28px;
+  display: block;
 }
-.np-scroll-dot {
-  position: absolute; top: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 1.5px; height: 14px;
-  background: #4da3ff;
-  box-shadow: 0 0 6px rgba(77,163,255,0.7);
-  animation: np-scroll-dot 1.8s cubic-bezier(0.4,0,0.2,1) infinite;
+.np-chevron {
+  position: absolute;
+  left: 0; top: 0;
+  opacity: 0;
+  width: 28px;
+  height: 18px;
 }
+@keyframes np-chev {
+  0%   { opacity: 0; transform: translateY(-8px); }
+  40%  { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 0; transform: translateY(8px); }
+}
+.np-chevron-1 { animation: np-chev 1.6s ease-in-out infinite; animation-delay: 0s; }
+.np-chevron-2 { animation: np-chev 1.6s ease-in-out infinite; animation-delay: 0.25s; top: 10px; }
+
 .np-br-desktop { display: inline; }
 @media (max-width: 700px) { .np-br-desktop { display: none; } }
 
@@ -817,15 +851,15 @@ const stats = [
 .np-vert-card:hover::before { opacity: 1; }
 
 .np-vert-icon-wrap {
-  display: inline-flex;
-  align-items: center; justify-content: center;
-  width: 56px; height: 56px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(77,163,255,0.18) 0%, rgba(77,163,255,0.06) 100%);
-  border: 1px solid rgba(77,163,255,0.20);
-  margin-bottom: 18px;
+  display: inline-block;
+  margin-bottom: 16px;
+  line-height: 1;
 }
-.np-vert-icon { font-size: 26px; }
+.np-vert-icon {
+  font-size: 44px;
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(77,163,255,0.18));
+}
 
 .np-vert-name {
   font-family: 'Poppins', system-ui, sans-serif;
@@ -847,14 +881,21 @@ const stats = [
 .np-vert-split {
   border-top: 1px solid #DDE6F5;
   padding-top: 18px;
-  display: flex; flex-direction: column; gap: 10px;
+  margin-top: auto;
+  display: flex; flex-direction: column; gap: 12px;
 }
-.np-vert-split-row { display: flex; align-items: flex-start; gap: 12px; }
+.np-vert-split-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  gap: 14px;
+}
 .np-vert-split-label {
-  flex-shrink: 0;
   font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-  padding: 4px 10px; border-radius: 9999px;
-  min-width: 56px; text-align: center;
+  padding: 5px 0;
+  border-radius: 9999px;
+  text-align: center;
+  line-height: 1;
 }
 .np-vert-split-free {
   background: #F0F5FF;
@@ -867,8 +908,10 @@ const stats = [
   border: 1px solid rgba(77,163,255,0.30);
 }
 .np-vert-split-value {
-  font-size: 13px; color: #1D0084; line-height: 1.45; font-weight: 500;
-  padding-top: 3px;
+  font-size: 13px;
+  color: #1D0084;
+  line-height: 1.45;
+  font-weight: 500;
 }
 
 /* ════════════════════════════════════════════
@@ -892,10 +935,16 @@ const stats = [
 .np-comp-title {
   font-family: 'Poppins', system-ui, sans-serif;
   font-size: clamp(30px, 4.5vw, 56px);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.1;
-  margin: 0 0 18px;
+  margin: 0 0 22px;
+}
+.np-comp-title-line {
+  display: block;
+}
+.np-comp-title-line + .np-comp-title-line {
+  margin-top: 14px;
 }
 .np-comp-sub {
   font-size: 17px; color: rgba(255,255,255,0.82); line-height: 1.65;
@@ -915,10 +964,7 @@ const stats = [
   padding: 36px 32px;
   display: flex; flex-direction: column;
   height: 100%;
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
-  will-change: transform;
 }
-.np-comp-card:hover { transform: scale(1.015); }
 .np-comp-free {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.12);
@@ -1021,9 +1067,11 @@ const stats = [
   font-size: 15px; font-weight: 700;
   text-decoration: none;
   width: 100%;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  transition: background 0.25s, transform 0.25s cubic-bezier(0.22,1,0.36,1), border-color 0.25s;
   position: relative; z-index: 1;
 }
+.np-comp-cta:hover { transform: scale(1.025); }
+.np-comp-cta:active { transform: scale(0.98); }
 .np-comp-cta-free {
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.18);
@@ -1031,19 +1079,13 @@ const stats = [
 }
 .np-comp-cta-free:hover {
   background: rgba(255,255,255,0.14);
-  transform: translateY(-1px);
   border-color: rgba(255,255,255,0.30);
 }
 .np-comp-cta-plus {
   background: #4da3ff;
   color: #1D0084;
-  box-shadow: 0 6px 24px rgba(77,163,255,0.35);
 }
-.np-comp-cta-plus:hover {
-  background: #5eb4ff;
-  transform: translateY(-1px);
-  box-shadow: 0 10px 32px rgba(77,163,255,0.50);
-}
+.np-comp-cta-plus:hover { background: #5eb4ff; }
 .np-comp-cancel {
   text-align: center;
   font-size: 12px;
@@ -1053,88 +1095,74 @@ const stats = [
 }
 
 /* ════════════════════════════════════════════
-   7. PRECIO
+   7. BEST — Lo mejor para hispanos
 ════════════════════════════════════════════ */
-.np-price {
+.np-best {
   background: #1D0084;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
-.np-price-glow {
+.np-best-glow {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-  width: 900px; height: 600px; border-radius: 50%;
+  width: 900px; height: 700px; border-radius: 50%;
   background: radial-gradient(ellipse at center, rgba(77,163,255,0.20) 0%, transparent 65%);
   pointer-events: none;
 }
-.np-price-header { text-align: center; max-width: 820px; margin: 0 auto 56px; }
-.np-price-title {
-  font-family: 'Poppins', system-ui, sans-serif;
-  font-size: clamp(44px, 7vw, 88px);
-  font-weight: 700;
-  letter-spacing: -0.035em;
-  line-height: 1;
-  margin: 0 0 26px;
+.np-best-header {
+  text-align: center; max-width: 820px; margin: 0 auto 64px;
 }
-.np-price-sub {
-  font-size: 17px; color: rgba(255,255,255,0.82); line-height: 1.65;
+.np-best-title {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: clamp(30px, 4.6vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.028em;
+  line-height: 1.1;
+  margin: 0 0 22px;
+}
+.np-best-sub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
   margin: 0;
 }
 
-.np-price-compare {
-  display: grid; grid-template-columns: 1fr; gap: 16px;
-  max-width: 900px; margin: 0 auto 56px;
+.np-best-pillars {
+  display: grid; grid-template-columns: 1fr; gap: 20px;
+  max-width: 1000px; margin: 0 auto;
 }
-@media (min-width: 768px) { .np-price-compare { grid-template-columns: repeat(3, 1fr); } }
-.np-price-col {
+@media (min-width: 768px) { .np-best-pillars { grid-template-columns: 1fr 1fr; } }
+
+.np-best-pillar {
   position: relative;
+  padding: 32px 30px 30px;
+  border-radius: 22px;
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 20px;
-  padding: 32px 24px 28px;
-  text-align: center;
+  border: 1px solid rgba(255,255,255,0.10);
 }
-.np-price-col-featured {
-  background: linear-gradient(160deg, rgba(77,163,255,0.18) 0%, rgba(11,109,240,0.06) 100%);
-  border: 1.5px solid rgba(77,163,255,0.50);
-  box-shadow: 0 16px 48px rgba(77,163,255,0.18);
+.np-best-pillar-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: rgba(77,163,255,0.12);
+  border: 1px solid rgba(77,163,255,0.22);
+  font-size: 24px;
+  margin-bottom: 18px;
 }
-.np-price-best {
-  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-  background: #4da3ff; color: #1D0084;
-  font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-  padding: 6px 14px; border-radius: 9999px;
-  box-shadow: 0 4px 16px rgba(77,163,255,0.40);
-}
-.np-price-col-label {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  font-weight: 500;
-  margin: 0 0 14px;
-}
-.np-price-col-amount {
+.np-best-pillar-title {
   font-family: 'Poppins', system-ui, sans-serif;
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: rgba(255,255,255,0.7);
-  line-height: 1;
-  margin: 0 0 12px;
-}
-.np-price-col-detail {
-  font-size: 12px;
-  color: rgba(255,255,255,0.55);
-  line-height: 1.5;
-  margin: 0;
-}
-.np-price-coffee {
-  text-align: center;
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
   color: #fff;
-  font-weight: 500;
+  margin: 0 0 10px;
+}
+.np-best-pillar-desc {
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.78);
   line-height: 1.6;
-  max-width: 720px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* ════════════════════════════════════════════
@@ -1197,13 +1225,15 @@ const stats = [
   color: rgba(255,255,255,0.92);
   font-size: 14px; font-weight: 600;
   text-decoration: none;
-  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  transition: border-color 0.25s, background 0.25s, color 0.25s, transform 0.25s cubic-bezier(0.22,1,0.36,1);
 }
 .np-cta-ghost:hover {
   border-color: rgba(255,255,255,0.6);
   background: rgba(255,255,255,0.08);
   color: #fff;
+  transform: scale(1.025);
 }
+.np-cta-ghost:active { transform: scale(0.98); }
 
 /* ════════════════════════════════════════════
    MOBILE / TABLET
@@ -1218,10 +1248,10 @@ const stats = [
   /* HERO */
   .np-hero { min-height: auto; }
   .np-hero-inner { padding: 110px 22px 64px; }
-  .np-hero-logo { max-width: 320px; width: 80vw; }
+  .np-hero-logo { max-width: 280px; width: 72vw; }
   .np-hero-title {
-    font-size: clamp(24px, 6.5vw, 32px);
-    line-height: 1.22;
+    font-size: clamp(26px, 7.2vw, 36px);
+    line-height: 1.15;
     margin-bottom: 18px;
   }
   .np-hero-sub {
@@ -1257,12 +1287,12 @@ const stats = [
   .np-vert-section-title { font-size: clamp(22px, 5.5vw, 30px); }
   .np-vert-card { padding: 26px 22px; }
   .np-vert-card:hover { transform: none; }
-  .np-vert-icon-wrap { width: 48px; height: 48px; }
-  .np-vert-icon { font-size: 22px; }
+  .np-vert-icon { font-size: 38px; }
   .np-vert-name { font-size: 20px; }
   .np-vert-desc { font-size: 14px; }
-  .np-vert-split-row { flex-direction: column; gap: 4px; }
-  .np-vert-split-label { align-self: flex-start; }
+  .np-vert-split-row { grid-template-columns: 56px 1fr; gap: 12px; }
+  .np-vert-split-label { font-size: 9px; }
+  .np-vert-split-value { font-size: 12.5px; }
 
   /* COMP */
   .np-comp { padding: 72px 0; }
@@ -1277,14 +1307,16 @@ const stats = [
   .np-tick::after { left: 1px; top: 3px; width: 9px; height: 5px; }
   .np-comp-cta { font-size: 14px; padding: 14px 20px; }
 
-  /* PRICE */
-  .np-price { padding: 64px 0 72px; }
-  .np-price-title { font-size: clamp(40px, 11vw, 64px); }
-  .np-price-sub { font-size: 15px; }
-  .np-price-compare { grid-template-columns: 1fr; gap: 12px; margin-bottom: 40px; }
-  .np-price-col { padding: 26px 22px; }
-  .np-price-col-featured { order: -1; }
-  .np-price-coffee { font-size: 15px; padding: 0 8px; }
+  /* BEST */
+  .np-best { padding: 64px 0 72px; }
+  .np-best-header { margin-bottom: 40px; }
+  .np-best-title { font-size: clamp(26px, 6.5vw, 36px); }
+  .np-best-sub { font-size: 15px; }
+  .np-best-pillars { grid-template-columns: 1fr; gap: 16px; }
+  .np-best-pillar { padding: 26px 22px; }
+  .np-best-pillar-icon { width: 44px; height: 44px; font-size: 20px; margin-bottom: 14px; }
+  .np-best-pillar-title { font-size: 17px; }
+  .np-best-pillar-desc { font-size: 14px; }
 
   /* MANIFIESTO */
   .np-manifiesto { padding: 0 16px 72px; }
@@ -1304,7 +1336,7 @@ const stats = [
   .np-hero-logo { width: 88vw; }
   .np-hero-title { font-size: 22px; }
   .np-stat-num { font-size: 44px; }
-  .np-price-title { font-size: 40px; }
+  .np-best-title { font-size: 26px; }
   .np-comp-amount { font-size: 36px; }
 }
 </style>
