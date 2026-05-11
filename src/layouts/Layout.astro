@@ -1,0 +1,170 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+  keywords?: string
+  ogImage?: string
+  canonicalURL?: string
+  noindex?: boolean
+}
+
+const {
+  title = 'Nawar — Aprende neerlandés online',
+  description = 'Academia de neerlandés para hispanohablantes. Clases en vivo, método desde el español y comunidad activa.',
+  keywords = 'neerlandés, holandés, curso online, hispanohablantes, clases en vivo, Países Bajos',
+  ogImage = 'https://www.holandesnawar.com/og-image.png',
+  canonicalURL = Astro.url.href,
+  noindex = true,
+} = Astro.props
+
+const siteURL = 'https://www.holandesnawar.com'
+---
+
+<!doctype html>
+<html lang="es" style="background:#1D0084">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+    <title>{title}</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HolandésNawar" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@holandesnawar" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "HolandésNawar",
+        "url": "https://www.holandesnawar.com",
+        "logo": "https://docs.holandesnawar.com/iconos/logo.png",
+        "description": "Academia de neerlandés online exclusiva para hispanohablantes. Método práctico, clases en vivo y comunidad activa.",
+        "inLanguage": "es",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Países Bajos"
+        },
+        "teaches": "Neerlandés (holandés)",
+        "sameAs": [
+          "https://www.instagram.com/holandesnawar",
+          "https://www.youtube.com/@holandesnawar"
+        ]
+      }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3GJTLQHRJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S3GJTLQHRJ');
+    </script>
+
+    <!-- Fonts: Inter + Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --font-inter: 'Inter', system-ui, sans-serif;
+        --font-poppins: 'Poppins', system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen antialiased" style="background:#1D0084">
+    <slot />
+
+
+    <!-- Scroll reveal: sequential stagger for .sr/.sr-s, bidirectional for .sr-bi -->
+    <script>
+      // Sequential stagger state
+      let batchCount = 0
+      let batchTimer: ReturnType<typeof setTimeout> | null = null
+      const STEP = 0.08        // seconds between each element in a batch
+      const MAX_DELAY = 0.32   // cap so last element never waits more than this
+      const RESET_AFTER = 600  // ms of silence before resetting counter
+
+      function resetBatch() {
+        batchCount = 0
+        batchTimer = null
+      }
+
+      // One-way observer — triggers as soon as element enters viewport
+      const obsOnce = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return
+            const el = e.target as HTMLElement
+            if (batchTimer) clearTimeout(batchTimer)
+            batchTimer = setTimeout(resetBatch, RESET_AFTER)
+            const extra = Math.min(batchCount * STEP, MAX_DELAY)
+            el.style.animationDelay = extra > 0 ? `${extra.toFixed(2)}s` : ''
+            el.classList.add('vis')
+            batchCount++
+            obsOnce.unobserve(el)
+          })
+        },
+        { threshold: 0.06, rootMargin: '0px 0px 0px 0px' }
+      )
+
+      // Bidirectional observer (keeps observing to reverse on exit)
+      let biCount = 0
+      let biTimer: ReturnType<typeof setTimeout> | null = null
+
+      const obsBi = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            const el = e.target as HTMLElement
+            if (e.isIntersecting) {
+              if (biTimer) clearTimeout(biTimer)
+              biTimer = setTimeout(() => { biCount = 0; biTimer = null }, RESET_AFTER)
+              const delay = Math.min(biCount * STEP, MAX_DELAY)
+              el.style.transitionDelay = delay > 0 ? `${delay.toFixed(2)}s` : '0s'
+              el.classList.add('vis')
+              biCount++
+            } else {
+              el.style.transitionDelay = '0s'
+              el.classList.remove('vis')
+            }
+          })
+        },
+        { threshold: 0.06, rootMargin: '0px 0px 0px 0px' }
+      )
+
+      document.querySelectorAll('.sr, .sr-s').forEach((el) => obsOnce.observe(el))
+      document.querySelectorAll('.sr-bi').forEach((el) => obsBi.observe(el))
+    </script>
+  </body>
+</html>
